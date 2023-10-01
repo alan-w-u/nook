@@ -38,6 +38,6 @@ public class StudySpace {
         if (currentCapacity >= maxCapacity) {
             return 100;
         }
-        return 100 * (currentCapacity / maxCapacity);
+        return (int)  (100 * ((double) currentCapacity / (double) maxCapacity));
     }
 }

@@ -19,7 +19,14 @@ public class main {
         ikb.addBooking(s2, 14, 15);
         System.out.println("IKB capacity: " + ikb.getCapacity());
         System.out.println("IKB time slots: " + ikb.getTimeSlots());
-        System.out.println(s1.getBookings());
-        System.out.println(s2.getBookings());
+        System.out.println("s1 bookings" + s1.getBookings());
+        System.out.println("s2 bookings" + s2.getBookings());
+        System.out.println("IKB bookings" + ikb.getBookings());
+        s1.removeBooking(ikb);
+        System.out.println("REMOVED STUDENT 1");
+        System.out.println("IKB capacity: " + ikb.getCapacity());
+        System.out.println("IKB time slots: " + ikb.getTimeSlots());
+        System.out.println("s1 bookings" + s1.getBookings());
+        System.out.println("IKB bookings" + ikb.getBookings());
     }
 }

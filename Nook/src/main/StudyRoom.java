@@ -1,6 +1,4 @@
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 
 public class StudyRoom extends StudySpace {
 
@@ -26,6 +24,11 @@ public class StudyRoom extends StudySpace {
 
     public List<Integer> getTimeSlots() {
         return timeSlots;
+    }
+
+    public void addTimeSlots(List<Integer> list) {
+        timeSlots.addAll(list);
+        Collections.sort(timeSlots);
     }
 
     public void addBooking(Student student, int startTime, int endTime) {

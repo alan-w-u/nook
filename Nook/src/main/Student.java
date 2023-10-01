@@ -41,6 +41,7 @@ public class Student {
 
     public void removeBooking(StudyRoom studyRoom) {
         if (bookings.containsKey(studyRoom)) {
+            studyRoom.addTimeSlots(bookings.get(studyRoom));
             bookings.remove(studyRoom);
             studyRoom.removeBooking(this);
         }
