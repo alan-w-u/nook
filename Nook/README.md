@@ -2,6 +2,6 @@
 
 ## Project Description
 
-An app which helps students find a study spot on campus. Users can check click onto buildings and see a capacity rating
-describing how full the locations are. They can also update this capacity score by rating a building to help aid other
-users. 
+An app which helps students find a study spot on campus. A university houses all the study spaces and room. Each study 
+space has a name and capacity, along with a capacity ratings.Study spaces are walk-in and thus do not have any books. 
+Study rooms are similar to study spaces except they require a booking. 
