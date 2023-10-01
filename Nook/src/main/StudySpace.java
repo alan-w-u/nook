@@ -10,16 +10,16 @@ public class StudySpace {
         this.maxCapacity = maxCapacity;
     }
 
+    public String getName() {
+        return room;
+    }
+
     public int getCapacity() {
         return currentCapacity;
     }
 
-    public int getMax() {
+    public int getMaxCapacity() {
         return maxCapacity;
-    }
-
-    public String getName() {
-        return room;
     }
 
     public void addStudent() {

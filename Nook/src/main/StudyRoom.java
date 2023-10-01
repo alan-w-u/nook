@@ -5,14 +5,27 @@ import java.util.List;
 public class StudyRoom extends StudySpace {
 
     private HashMap<Student, List<Integer>> bookings;
+    private List<Integer> timeSlots;
 
-    public StudyRoom(String room, int currentCapacity, int maxCapacity, HashMap<Student, List<Integer>> book) {
+    public StudyRoom(String room, int currentCapacity, int maxCapacity, int openTime, int closeTime) {
         super(room, currentCapacity, maxCapacity);
-        bookings = book;
+        bookings = new HashMap<>();
+
+        List<Integer> times = new ArrayList<>();
+
+        for (int i = openTime; i <= closeTime; i++) {
+            times.add((Integer) i);
+        }
+
+        this.timeSlots = times;
     }
 
     public HashMap<Student, List<Integer>> getBookings() {
         return bookings;
+    }
+
+    public List<Integer> getTimeSlots() {
+        return timeSlots;
     }
 
     public void addBooking(Student student, int startTime, int endTime) {
