@@ -11,6 +11,7 @@ public class main {
         nest.addStudent();
         nest.removeStudent();
         System.out.println("Nest capacity: " + nest.getCapacity());
+        System.out.println("Nest full rating: " + nest.howFull());
 
         System.out.println("IKB capacity: " + ikb.getCapacity());
         System.out.println("IKB time slots: " + ikb.getTimeSlots());
