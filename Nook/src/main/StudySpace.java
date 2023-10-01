@@ -1,8 +1,8 @@
 public class StudySpace {
 
-    private String room;
-    private int currCap;
-    private int maxCap;
+    protected String room;
+    protected int currCap;
+    protected int maxCap;
 
     public StudySpace(String r, int ccap, int mcap) {
         room = r;
@@ -23,10 +23,15 @@ public class StudySpace {
     }
 
     public void addStudent() {
-        if (currCap++ > maxCap) {
-
+        if (currCap < maxCap) {
+            currCap++;
         }
-        currCap++;
+    }
+
+    public void removeStudent() {
+        if (currCap > 0) {
+            currCap--;
+        }
     }
 
     public int howFull() {
