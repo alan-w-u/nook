@@ -26,7 +26,7 @@ public class Student {
         List<Integer> list = new ArrayList<>();
 
         for (int i = startTime; i < endTime; i++) {
-            if (studyRoom.getBookings().containsValue(i)) {
+            if (studyRoom.getBookings().containsValue((Integer) i)) {
                 return;
             }
 
@@ -35,13 +35,14 @@ public class Student {
 
         if (!this.bookings.containsKey(studyRoom)) {
             bookings.put(studyRoom, list);
-            studyRoom.addBooking(this, list);
+            studyRoom.addBooking(this, startTime, endTime);
         }
     }
 
     public void removeBooking(StudyRoom studyRoom) {
         if (bookings.containsKey(studyRoom)) {
-
+            bookings.remove(studyRoom);
+            studyRoom.removeBooking(this);
         }
     }
 }
