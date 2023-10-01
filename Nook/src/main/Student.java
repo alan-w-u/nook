@@ -13,6 +13,10 @@ public class Student {
         bookings = new HashMap<>();
     }
 
+    public List<Integer> getlob(StudyRoom s) {
+        return bookings.get(s);
+    }
+
     public String getName() {
         return name;
     }

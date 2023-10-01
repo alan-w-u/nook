@@ -22,6 +22,14 @@ public class StudyRoom extends StudySpace {
         return bookings;
     }
 
+    public String printBookings(StudyRoom r) {
+        String temp = " ";
+        for (Student key : bookings.keySet()) {
+            temp += key.getName() + key.getlob(r) + " ";
+        }
+        return temp;
+    }
+
     public List<Integer> getTimeSlots() {
         return timeSlots;
     }
@@ -58,4 +66,9 @@ public class StudyRoom extends StudySpace {
             student.removeBooking(this);
         }
     }
-}
+
+    public int getCapacity() {
+        return (timeSlots.size());
+        }
+    }
+
