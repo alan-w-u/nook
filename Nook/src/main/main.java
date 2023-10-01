@@ -17,6 +17,9 @@ public class main {
         System.out.println("IKB time slots: " + ikb.getTimeSlots());
         ikb.addBooking(s1, 10, 12);
         ikb.addBooking(s2, 14, 15);
+        System.out.println("IKB capacity: " + ikb.getCapacity());
         System.out.println("IKB time slots: " + ikb.getTimeSlots());
+        System.out.println(s1.getBookings());
+        System.out.println(s2.getBookings());
     }
 }

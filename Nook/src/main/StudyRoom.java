@@ -9,7 +9,7 @@ public class StudyRoom extends StudySpace {
 
     public StudyRoom(String room, int currentCapacity, int maxCapacity, int openTime, int closeTime) {
         super(room, currentCapacity, maxCapacity);
-        bookings = new HashMap<>();
+        this.bookings = new HashMap<>();
 
         List<Integer> times = new ArrayList<>();
 
@@ -31,7 +31,7 @@ public class StudyRoom extends StudySpace {
     public void addBooking(Student student, int startTime, int endTime) {
         List<Integer> list = new ArrayList<>();
 
-        for (int i = startTime; i < endTime; i++) {
+        for (int i = startTime; i <= endTime; i++) {
             if (student.getBookings().containsValue((Integer) i)) {
                 return;
             }
@@ -39,7 +39,10 @@ public class StudyRoom extends StudySpace {
             list.add((Integer) i);
         }
 
+        timeSlots.removeAll(list);
+
         if (!this.bookings.containsKey(student)) {
+            currentCapacity++;
             bookings.put(student, list);
             student.addBooking(this, startTime, endTime);
         }
@@ -47,6 +50,7 @@ public class StudyRoom extends StudySpace {
 
     public void removeBooking(Student student) {
         if (bookings.containsKey(student)) {
+            currentCapacity--;
             bookings.remove(student);
             student.removeBooking(this);
         }

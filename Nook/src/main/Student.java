@@ -25,7 +25,7 @@ public class Student {
 
         List<Integer> list = new ArrayList<>();
 
-        for (int i = startTime; i < endTime; i++) {
+        for (int i = startTime; i <= endTime; i++) {
             if (studyRoom.getBookings().containsValue((Integer) i)) {
                 return;
             }
