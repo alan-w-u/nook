@@ -10,6 +10,8 @@ This project was created as part of **UBC BizTech HelloHacks 2023**, a 2-day hac
 
 The backend was written in Java and the frontend was made using Figma. Below is a link to the Figma project along with screenshots for the UI of the theoretical app. 
 
+## Images
+
 **Figma Link:** https://www.figma.com/file/iirV4MjBk3zM292ppk4Rn9/Nook.?type=design&node-id=0-1&mode=design
 
 | Loading Screen  | Login Screen | Main Menu | Search | Preview Room | Booking Screen |
